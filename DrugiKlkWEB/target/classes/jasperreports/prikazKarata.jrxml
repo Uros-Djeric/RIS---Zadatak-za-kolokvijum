@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="prikazKarata" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9085db4-7ff5-4de0-aeb7-ce1770afe19c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="predstava" class="java.lang.String"/>
+	<parameter name="datumIzv" class="java.util.Date"/>
+	<parameter name="scena" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="mesto.sekcija" class="java.lang.String"/>
+	<field name="mesto.red" class="java.lang.Integer"/>
+	<field name="mesto.broj" class="java.lang.Integer"/>
+	<field name="posetilac.ime" class="java.lang.String"/>
+	<field name="posetilac.prezime" class="java.lang.String"/>
+	<variable name="br_karata" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{posetilac.ime}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="30" width="213" height="30" uuid="e6972efc-bff6-4a7f-98bc-a014e23fb5fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Prikaz karata]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="10" width="100" height="30" uuid="01c04311-c748-4540-85f8-9f372ecaed75"/>
+				<text><![CDATA[Naziv predstave:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="10" width="100" height="30" uuid="8137d179-5889-41ef-a1f7-dbdd9a4ee18d"/>
+				<text><![CDATA[Datum izvodjenja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="100" height="30" uuid="90a3d640-5f40-4bcf-bcfc-cdd4c52098a0"/>
+				<text><![CDATA[Naziv scene:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="10" width="100" height="30" uuid="32e07223-d1af-4f2f-be4e-3bc483ea2d5b"/>
+				<textFieldExpression><![CDATA[$P{predstava}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="10" width="100" height="30" uuid="6f21682d-2b1f-42dd-96a6-7a17bfd56f21"/>
+				<textFieldExpression><![CDATA[$P{datumIzv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="10" width="100" height="30" uuid="149dbcbc-4a6d-499f-977e-af0d807d1a88"/>
+				<textFieldExpression><![CDATA[$P{scena}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="47" width="100" height="30" uuid="a0f1cebc-a322-4124-8409-c219eb306821"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{mesto.sekcija}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="30" y="17" width="100" height="30" backcolor="#48A7C2" uuid="7b1fd2fe-d2ef-4863-a1a2-fc1c52594259"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sekcija]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="47" width="100" height="30" uuid="419d7ab5-ca85-4141-be5f-cea57d17160e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{mesto.red}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="130" y="17" width="100" height="30" backcolor="#48A7C2" uuid="d2448544-6880-4404-a7f3-678e85f4c9bf"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Red]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="47" width="100" height="30" uuid="37b4e2b9-07a3-423b-9d9a-48f797c31ea3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{mesto.broj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="230" y="17" width="100" height="30" backcolor="#48A7C2" uuid="f866ab36-31ce-4ff6-b8bf-f42ca850af42"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Broj]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="47" width="100" height="30" uuid="893f0644-db87-4103-a152-bf89c4a6c7c3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{posetilac.ime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="330" y="17" width="100" height="30" backcolor="#48A7C2" uuid="e1303673-be80-4a50-807c-630357db3c35"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ime]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="47" width="100" height="30" uuid="9871f1b4-8b14-44fc-9e0e-5024b8973595"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{posetilac.prezime}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="430" y="17" width="100" height="30" backcolor="#48A7C2" uuid="0db57e79-ad8a-4ef8-b687-e7f49e8161f2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prezime]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="30" width="100" height="30" uuid="3eadad0b-8ab9-4bc6-9f21-b61911f67ff7"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="17" width="100" height="30" uuid="67b7b22a-082f-4ff4-91ac-97aed2a3d2b7"/>
+				<textFieldExpression><![CDATA[$V{br_karata}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="407" y="17" width="100" height="30" uuid="290fcd35-e970-49c5-9150-46376bb7e5d1"/>
+				<text><![CDATA[Broj karata:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
